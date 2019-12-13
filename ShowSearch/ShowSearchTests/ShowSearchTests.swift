@@ -11,24 +11,34 @@ import XCTest
 
 class ShowSearchTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGirls() {
+        let searchQuery = "girls".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let exp = XCTestExpectation(description: "Searches Found")
+        let showEndpointURL = "https://api.tvmaze.com/search/shows?q=\(searchQuery)"
+        let request = URLRequest(url: URL(string: showEndpointURL)!)
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+                XCTFail("appError: \(appError)")
+            case .success(let data):
+                exp.fulfill()
+                XCTAssertGreaterThan(data.count, 80000, "data should be greater than \(data.count)")
+            }
         }
+        wait(for: [exp], timeout: 10.0)
+    
     }
 
+    
+          
+//        ShowSearchAPI.fetchShows(for: searchQuery) { (result) in
+//            switch result {
+//            case .failure(let appError):
+//                XCTFail("appError : \(appError)")
+//            case .success(let shows):
+//                exp.fulfill()
+//                XCTAssertEqual(shows.count, expectedShowsCount)
+//        }
+//              }
+//          }
 }
