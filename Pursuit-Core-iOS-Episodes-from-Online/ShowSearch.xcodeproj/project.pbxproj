@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B60D2B823A3D6E800DD00CA /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60D2B723A3D6E800DD00CA /* NetworkHelper.swift */; };
+		6B60D2BA23A3D74900DD00CA /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60D2B923A3D74900DD00CA /* AppError.swift */; };
+		6B60D2BE23A3DD2500DD00CA /* ShowSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60D2BD23A3DD2500DD00CA /* ShowSearchAPI.swift */; };
+		6B60D2C723A4328100DD00CA /* ShowSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60D2C623A4328100DD00CA /* ShowSearch.swift */; };
 		CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5B232178AF002D0255 /* AppDelegate.swift */; };
 		CD01CD5E232178AF002D0255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5D232178AF002D0255 /* ViewController.swift */; };
 		CD01CD61232178AF002D0255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD01CD5F232178AF002D0255 /* Main.storyboard */; };
 		CD01CD63232178B2002D0255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD01CD62232178B2002D0255 /* Assets.xcassets */; };
 		CD01CD66232178B2002D0255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD01CD64232178B2002D0255 /* LaunchScreen.storyboard */; };
-		CD01CD71232178B2002D0255 /* Pursuit_Core_iOS_Episodes_from_OnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD70232178B2002D0255 /* Pursuit_Core_iOS_Episodes_from_OnlineTests.swift */; };
+		CD01CD71232178B2002D0255 /* ShowSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD70232178B2002D0255 /* ShowSearchAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B60D2B723A3D6E800DD00CA /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		6B60D2B923A3D74900DD00CA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		6B60D2BD23A3DD2500DD00CA /* ShowSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchAPI.swift; sourceTree = "<group>"; };
+		6B60D2C623A4328100DD00CA /* ShowSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearch.swift; sourceTree = "<group>"; };
 		CD01CD58232178AF002D0255 /* Pursuit-Core-iOS-Episodes-from-Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-Episodes-from-Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01CD5B232178AF002D0255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD01CD5D232178AF002D0255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +42,7 @@
 		CD01CD65232178B2002D0255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD01CD67232178B2002D0255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD01CD6C232178B2002D0255 /* Pursuit-Core-iOS-Episodes-from-OnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pursuit-Core-iOS-Episodes-from-OnlineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD01CD70232178B2002D0255 /* Pursuit_Core_iOS_Episodes_from_OnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pursuit_Core_iOS_Episodes_from_OnlineTests.swift; sourceTree = "<group>"; };
+		CD01CD70232178B2002D0255 /* ShowSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchAPITests.swift; sourceTree = "<group>"; };
 		CD01CD72232178B2002D0255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +64,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B60D2C123A41FA400DD00CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD01CD5D232178AF002D0255 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6B60D2C223A41FEF00DD00CA /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				6B60D2B923A3D74900DD00CA /* AppError.swift */,
+				6B60D2B723A3D6E800DD00CA /* NetworkHelper.swift */,
+				6B60D2BD23A3DD2500DD00CA /* ShowSearchAPI.swift */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		6B60D2C323A4272F00DD00CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B60D2C623A4328100DD00CA /* ShowSearch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CD01CD4F232178AF002D0255 = {
 			isa = PBXGroup;
 			children = (
+				6B60D2C323A4272F00DD00CA /* Models */,
+				6B60D2C223A41FEF00DD00CA /* Network Services */,
+				6B60D2C123A41FA400DD00CA /* View Controllers */,
 				CD01CD5A232178AF002D0255 /* Pursuit-Core-iOS-Episodes-from-Online */,
 				CD01CD6F232178B2002D0255 /* Pursuit-Core-iOS-Episodes-from-OnlineTests */,
 				CD01CD59232178AF002D0255 /* Products */,
@@ -78,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				CD01CD5B232178AF002D0255 /* AppDelegate.swift */,
-				CD01CD5D232178AF002D0255 /* ViewController.swift */,
 				CD01CD5F232178AF002D0255 /* Main.storyboard */,
 				CD01CD62232178B2002D0255 /* Assets.xcassets */,
 				CD01CD64232178B2002D0255 /* LaunchScreen.storyboard */,
@@ -90,7 +126,7 @@
 		CD01CD6F232178B2002D0255 /* Pursuit-Core-iOS-Episodes-from-OnlineTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD01CD70232178B2002D0255 /* Pursuit_Core_iOS_Episodes_from_OnlineTests.swift */,
+				CD01CD70232178B2002D0255 /* ShowSearchAPITests.swift */,
 				CD01CD72232178B2002D0255 /* Info.plist */,
 			);
 			path = "Pursuit-Core-iOS-Episodes-from-OnlineTests";
@@ -153,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CD01CD53232178AF002D0255 /* Build configuration list for PBXProject "Pursuit-Core-iOS-Episodes-from-Online" */;
+			buildConfigurationList = CD01CD53232178AF002D0255 /* Build configuration list for PBXProject "ShowSearch" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,8 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B60D2C723A4328100DD00CA /* ShowSearch.swift in Sources */,
+				6B60D2BA23A3D74900DD00CA /* AppError.swift in Sources */,
 				CD01CD5E232178AF002D0255 /* ViewController.swift in Sources */,
+				6B60D2B823A3D6E800DD00CA /* NetworkHelper.swift in Sources */,
 				CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */,
+				6B60D2BE23A3DD2500DD00CA /* ShowSearchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD01CD71232178B2002D0255 /* Pursuit_Core_iOS_Episodes_from_OnlineTests.swift in Sources */,
+				CD01CD71232178B2002D0255 /* ShowSearchAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD01CD53232178AF002D0255 /* Build configuration list for PBXProject "Pursuit-Core-iOS-Episodes-from-Online" */ = {
+		CD01CD53232178AF002D0255 /* Build configuration list for PBXProject "ShowSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD01CD73232178B2002D0255 /* Debug */,
