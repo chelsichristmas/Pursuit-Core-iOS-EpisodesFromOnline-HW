@@ -9,17 +9,17 @@
 import Foundation
 
 struct ShowSearch: Decodable {
-    var show: [Details]
+    var show: ShowInfo
 }
 
-struct Details: Decodable {
+struct ShowInfo: Decodable {
     var name: String
     var rating: Rating
-    var image: Image
+    var image: Image?
 }
 
 struct Rating: Decodable {
-    var average: Double
+    var average: Double?
 }
 
 struct Image: Decodable {

@@ -30,15 +30,3 @@ class ShowSearchTests: XCTestCase {
     }
 
     
-          
-//        ShowSearchAPI.fetchShows(for: searchQuery) { (result) in
-//            switch result {
-//            case .failure(let appError):
-//                XCTFail("appError : \(appError)")
-//            case .success(let shows):
-//                exp.fulfill()
-//                XCTAssertEqual(shows.count, expectedShowsCount)
-//        }
-//              }
-//          }
-}

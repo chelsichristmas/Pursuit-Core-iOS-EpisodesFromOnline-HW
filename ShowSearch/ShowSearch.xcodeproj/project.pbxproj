@@ -69,8 +69,8 @@
 		6B60D2C823A4363900DD00CA = {
 			isa = PBXGroup;
 			children = (
-				6B60D2FD23A436F700DD00CA /* Models */,
 				6B60D2F623A4367400DD00CA /* NetworkServices */,
+				6B60D2FD23A436F700DD00CA /* Models */,
 				6B60D30223A4386D00DD00CA /* View Controllers */,
 				6B60D2D323A4363900DD00CA /* ShowSearch */,
 				6B60D2EA23A4363D00DD00CA /* ShowSearchTests */,

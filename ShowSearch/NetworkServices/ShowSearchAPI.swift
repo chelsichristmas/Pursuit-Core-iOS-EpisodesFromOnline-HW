@@ -12,11 +12,11 @@ import Foundation
 struct ShowSearchAPI {
     
     
-    static func fetchShows(for searchQuery: String, completion: @escaping (Result<[Details], AppError>) ->()) {
+    static func fetchShows(for searchQuery: String, completion: @escaping (Result<[ShowInfo], AppError>) ->()) {
         
         let searchQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "Lost"
         
-        let episodeEndpointURL = "http://api.tvmaze.com/search/shows?q=\(searchQuery)"
+        let episodeEndpointURL = "https://api.tvmaze.com/search/shows?q=\(searchQuery)"
         
         
         
@@ -33,9 +33,9 @@ struct ShowSearchAPI {
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
                 do {
-                    let searchResults = try JSONDecoder().decode(ShowSearch.self, from: data)
+                    let searchResults = try JSONDecoder().decode([ShowSearch].self, from: data)
                     // 1. use search results to create an array of recipes
-                    let shows = searchResults.show
+                    let shows = searchResults.map { $0.show}
                 // 2 . capture the array of recipes in the completion handler
                     completion(.success(shows))
                     
